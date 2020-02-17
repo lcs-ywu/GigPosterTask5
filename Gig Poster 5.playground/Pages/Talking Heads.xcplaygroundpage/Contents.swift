@@ -18,7 +18,7 @@ import PlaygroundSupport
  * iteration (use of loops to repeat statements)
  * arrays (a data structure that stores related pieces of information)
  * use of arithmetic operators in expressions
-
+ 
  You may use the color constants created below to obtain the correct colors.
  
  Remember that you can refer to the [Canvas class documentation](https://www.russellgordon.ca/canvasgraphics/documentation/classes/canvas), as needed.
@@ -26,9 +26,9 @@ import PlaygroundSupport
  ## Use Source Control
  
  To create evidence that supports your case for exceeding expectations for thread 3:
-
+ 
  * You *must* commit and push regularly ... *not* just at the end of this task.
-
+ 
  * You *must* complete your work prior to 3:30 PM on Wednesday, February 12, 2020.
  
  Good luck! You've got this! 👊🏻👊🏼👊🏽👊🏾👊🏿
@@ -43,18 +43,49 @@ let offWhite = Color(hue: 81, saturation: 5, brightness: 88, alpha: 100)
 let brightYellow = Color(hue: 46, saturation: 71, brightness: 98, alpha: 100)
 
 // Begin your solution here...
+canvas.fillColor = deepOrange
+canvas.drawRectangle(at: Point(x:0,y:0), width: 400, height: 600)
 
+//Add triangles
+for x in 0...8 {
+    for y in 0...8 {
+        var triangles:[Point] = []
+        triangles.append(Point(x:44.44*Double(x),y:200.00+44.44*Double(y)))
+        triangles.append(Point(x:44.44*Double(x)+44.44,y:200.00+44.44*Double(y)))
+        triangles.append(Point(x:44.44*Double(x)+44.44,y:200.00+44.44*Double(y)+44.44))
+        canvas.drawShapesWithBorders=false
+        if x>=y {
+            canvas.fillColor = brightYellow
+        }else{
+            canvas.fillColor = offWhite
+        }
+        canvas.drawCustomShape(with: triangles)
+        
+    }
+}
+
+
+
+
+
+//Last, draw a grid for referennce
+for y in stride(from: 0, through: 600, by: 50){
+    canvas.drawLine(from: Point(x:0,y:y), to: Point(x:400,y:y))
+}
+for x in stride(from: 0, through: 400, by: 50){
+    canvas.drawLine(from: Point(x: x, y: 0), to: Point(x: x, y: 600))
+}
 
 /*:
  ## Use Source Control
  
  To create evidence that supports your case for exceeding expectations for thread 3:
-
+ 
  * You *must* commit and push regularly ... *not* just at the end of this task.
-
+ 
  * You *must* complete your work prior to 3:30 PM on Wednesday, February 12, 2020.
-
-
+ 
+ 
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
  */
