@@ -63,18 +63,29 @@ for x in 0...8 {
         
     }
 }
+//Add text
+canvas.textColor = offWhite
+//Title
+canvas.drawText(message: "taking heads", at: Point(x:20,y:140), size: 42)
+
+canvas.drawText(message: "friday, saturday, sunday", at: Point(x:20,y:30), size: 8)
+canvas.drawText(message: "september 12, 13, 14, 1975", at: Point(x:20,y:15), size: 8)
+canvas.drawText(message: "at cbgb and omfug", at: Point(x:150,y:30), size: 8)
+canvas.drawText(message: "315 bowery, new york city", at: Point(x:150,y:15), size: 8)
+canvas.drawText(message: "also appearing:", at: Point(x:280,y:30), size: 8)
+canvas.drawText(message: "from brooklyn, the shirts", at: Point(x:280,y:15), size: 8)
 
 
 
 
 
-//Last, draw a grid for referennce
-for y in stride(from: 0, through: 600, by: 50){
-    canvas.drawLine(from: Point(x:0,y:y), to: Point(x:400,y:y))
-}
-for x in stride(from: 0, through: 400, by: 50){
-    canvas.drawLine(from: Point(x: x, y: 0), to: Point(x: x, y: 600))
-}
+////Last, draw a grid for referennce
+//for y in stride(from: 0, through: 600, by: 50){
+//    canvas.drawLine(from: Point(x:0,y:y), to: Point(x:400,y:y))
+//}
+//for x in stride(from: 0, through: 400, by: 50){
+//    canvas.drawLine(from: Point(x: x, y: 0), to: Point(x: x, y: 600))
+//}
 
 /*:
  ## Use Source Control
