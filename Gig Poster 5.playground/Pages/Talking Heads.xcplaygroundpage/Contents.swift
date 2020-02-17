@@ -66,7 +66,7 @@ for x in 0...8 {
 //Add text
 canvas.textColor = offWhite
 //Title
-canvas.drawText(message: "taking heads", at: Point(x:20,y:140), size: 42)
+canvas.drawText(message: "talking heads", at: Point(x:20,y:140), size: 42)
 
 canvas.drawText(message: "friday, saturday, sunday", at: Point(x:20,y:30), size: 8)
 canvas.drawText(message: "september 12, 13, 14, 1975", at: Point(x:20,y:15), size: 8)
